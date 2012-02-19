@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>elmah</id>
+    <version>1.2.1.0</version>
+    <title>ELMAH</title>
+    <authors>Atif Aziz</authors>
+    <owners>Atif Aziz, James Driscoll</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>http://elmah.googlecode.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ELMAH with initial configuration for getting started quickly. ELMAH (Error Logging Modules and Handlers) is an application-wide error logging facility that is completely pluggable. It can be dynamically added to a running ASP.NET web application, or even all ASP.NET web applications on a machine, without any need for re-compilation or re-deployment.</description>
+    <summary>ELMAH with initial configuration for getting started quickly. ELMAH (Error Logging Modules and Handlers) is an application-wide error logging facility that is completely pluggable. It can be dynamically added to a running ASP.NET web application, or even all ASP.NET web applications on a machine, without any need for re-compilation or re-deployment.</summary>
+    <releaseNotes>This release updates the way that the elmah.axd httpHandler is registered in web.config.
+The handler is now registered in a &lt;location path="elmah.axd" /&gt; element which makes it much more secure.
+Furthermore, an &lt;authorization /&gt; element is placed on the location such that only users with a role of elmah are able to view the handler. 
+There are compelling reasons for doing this which are documented here: http://www.troyhunt.com/2012/01/aspnet-session-hijacking-with-google.html
+Additional information can be found on the project's wiki page: http://code.google.com/p/elmah/wiki/SecuringErrorLogPages
+Also, don't forget to look at App_Readme\Elmah.txt in your application's root folder.</releaseNotes>
+    <language>en-US</language>
+    <tags>elmah error logging unhandled exception</tags>
+    <dependencies>
+      <dependency id="elmah.corelibrary" version="1.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Transforms\Elmah.web.config.transform" target="content\web.config.transform" />
+    <file src="App_Readme\Elmah.txt" target="content\App_Readme" />
+  </files>
+</package>
