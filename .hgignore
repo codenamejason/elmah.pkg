@@ -2,3 +2,4 @@ syntax: glob
 bin/**
 tmp/**
 base/**
+nuget/App_Readme/Concat.**
